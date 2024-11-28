@@ -5,5 +5,4 @@ public record NotificationRequest(
         String toCustomerName,
         String message
 ) {
-
 }
