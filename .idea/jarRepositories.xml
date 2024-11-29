@@ -16,5 +16,10 @@
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="your-repository-id" />
+      <option name="name" value="your-repository-id" />
+      <option name="url" value="https://your-repository-url" />
+    </remote-repository>
   </component>
 </project>
