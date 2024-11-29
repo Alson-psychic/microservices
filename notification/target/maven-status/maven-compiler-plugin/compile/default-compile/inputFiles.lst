@@ -1,0 +1,6 @@
+/home/alson/BackProjects/microservices/notification/src/main/java/NotificationApplication.java
+/home/alson/BackProjects/microservices/notification/src/main/java/ru/als/app/config/NotificationConfig.java
+/home/alson/BackProjects/microservices/notification/src/main/java/ru/als/app/controller/NotificationController.java
+/home/alson/BackProjects/microservices/notification/src/main/java/ru/als/app/entity/Notification.java
+/home/alson/BackProjects/microservices/notification/src/main/java/ru/als/app/respository/NotificationRepository.java
+/home/alson/BackProjects/microservices/notification/src/main/java/ru/als/app/service/NotificationService.java

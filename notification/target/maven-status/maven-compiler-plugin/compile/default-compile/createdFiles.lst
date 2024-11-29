@@ -1,0 +1,6 @@
+ru/als/app/service/NotificationService.class
+NotificationApplication.class
+ru/als/app/controller/NotificationController.class
+ru/als/app/respository/NotificationRepository.class
+ru/als/app/entity/Notification.class
+ru/als/app/config/NotificationConfig.class

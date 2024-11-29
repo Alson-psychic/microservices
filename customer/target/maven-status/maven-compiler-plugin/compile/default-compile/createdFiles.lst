@@ -1,0 +1,6 @@
+ru/als/app/service/CustomerService.class
+ru/als/app/dto/CustomerRegistrationRequest.class
+ru/als/app/CustomerApplication.class
+ru/als/app/controller/CustomerController.class
+ru/als/app/entity/Customer.class
+ru/als/app/repository/CustomerRepository.class

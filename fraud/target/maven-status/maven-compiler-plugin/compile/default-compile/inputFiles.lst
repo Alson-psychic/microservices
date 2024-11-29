@@ -1,0 +1,5 @@
+/home/alson/BackProjects/microservices/fraud/src/main/java/ru/als/app/FraudApplication.java
+/home/alson/BackProjects/microservices/fraud/src/main/java/ru/als/app/controller/FraudController.java
+/home/alson/BackProjects/microservices/fraud/src/main/java/ru/als/app/entity/FraudCheckHistory.java
+/home/alson/BackProjects/microservices/fraud/src/main/java/ru/als/app/repository/FraudCheckHistoryRepository.java
+/home/alson/BackProjects/microservices/fraud/src/main/java/ru/als/app/service/FraudCheckService.java

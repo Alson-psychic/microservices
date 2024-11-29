@@ -1,0 +1,6 @@
+/home/alson/BackProjects/microservices/customer/src/main/java/ru/als/app/CustomerApplication.java
+/home/alson/BackProjects/microservices/customer/src/main/java/ru/als/app/controller/CustomerController.java
+/home/alson/BackProjects/microservices/customer/src/main/java/ru/als/app/dto/CustomerRegistrationRequest.java
+/home/alson/BackProjects/microservices/customer/src/main/java/ru/als/app/entity/Customer.java
+/home/alson/BackProjects/microservices/customer/src/main/java/ru/als/app/repository/CustomerRepository.java
+/home/alson/BackProjects/microservices/customer/src/main/java/ru/als/app/service/CustomerService.java

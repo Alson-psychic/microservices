@@ -2,6 +2,7 @@ package ru.als.app.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 import ru.als.app.dto.CustomerRegistrationRequest;
 import ru.als.app.entity.Customer;
 import ru.als.app.fraud.FraudCheckResponse;
@@ -12,9 +13,9 @@ import ru.als.app.repository.CustomerRepository;
 @Service
 @AllArgsConstructor
 public class CustomerService {
-
     private final CustomerRepository customerRepository;
     private final FraudClient fraudClient;
+    //private final RestTemplate restTemplate;
 
     public void registerCustomer(CustomerRegistrationRequest request) {
         Customer customer = Customer.builder()
@@ -22,10 +23,8 @@ public class CustomerService {
                 .lastName(request.lastName())
                 .email(request.email())
                 .build();
-        // todo: check if email valid
-        // todo: check if email not taken
-        customerRepository.saveAndFlush(customer);
 
+        customerRepository.saveAndFlush(customer);
         FraudCheckResponse fraudCheckResponse =
                 fraudClient.isFraudster(customer.getId());
 
@@ -36,14 +35,9 @@ public class CustomerService {
         NotificationRequest notificationRequest = new NotificationRequest(
                 customer.getId(),
                 customer.getEmail(),
-                String.format("Hi %s, welcome to Amigoscode...",
+                String.format("Hi %s, welcome to Als...",
                         customer.getFirstName())
         );
-//        rabbitMQMessageProducer.publish(
-//                notificationRequest,
-//                "internal.exchange",
-//                "internal.notification.routing-key"
-//        );
 
     }
 }
