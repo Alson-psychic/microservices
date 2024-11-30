@@ -25,7 +25,7 @@ public class NotificationApplication {
 
     @Bean
     CommandLineRunner commandLineRunner(
-            //RabbitMQMessageProducer producer,
+            RabbitMQMessageProducer producer,
             NotificationConfig notificationConfig) {
         return args -> {
             producer.publish(
