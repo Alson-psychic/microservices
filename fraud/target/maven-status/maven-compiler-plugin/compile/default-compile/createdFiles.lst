@@ -1,0 +1,6 @@
+ru/als/app/repository/FraudCheckHistoryRepository.class
+ru/als/app/service/FraudCheckService.class
+ru/als/app/entity/FraudCheckHistory$FraudCheckHistoryBuilder.class
+ru/als/app/entity/FraudCheckHistory.class
+ru/als/app/controller/FraudController.class
+ru/als/app/FraudApplication.class

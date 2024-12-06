@@ -4,3 +4,4 @@ ru/als/app/controller/NotificationController.class
 ru/als/app/respository/NotificationRepository.class
 ru/als/app/entity/Notification.class
 ru/als/app/config/NotificationConfig.class
+ru/als/app/entity/Notification$NotificationBuilder.class

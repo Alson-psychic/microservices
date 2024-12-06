@@ -11,20 +11,20 @@ services:
       - "5672:5672"
       - "15672:15672"
   eureka-server:
-    image: als/eureka-server:latest
+    image: eureka-server:latest
     container_name: eureka_server
     ports:
       - "8761:8761"
-    depends_on:
-      - zipkin
-  apiGateway:
-    image: als/apiGateway:latest
-    container_name: apiGateway
+#    depends_on:
+#      - zipkin
+  apigw:
+    image: apigw:latest
+    container_name: api-gateway
     ports:
       - "8083:8083"
-    depends_on:
-      - zipkin
-      - eureka-server
+#    depends_on:
+#      - zipkin
+#      - eureka-server
   postgres:
     container_name: postgres
     image: postgres
@@ -53,6 +53,72 @@ services:
     networks:
       - postgres
     restart: unless-stopped
+
+#  eureka-server:
+#    image: amigoscode/eureka-server:latest
+#    container_name: eureka-server
+#    ports:
+#      - "8761:8761"
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=docker
+#    networks:
+#      - spring
+#    depends_on:
+#      - zipkin
+#  apigw:
+#    image: amigoscode/apigw:latest
+#    container_name: apigw
+#    ports:
+#      - "8083:8083"
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=docker
+#    networks:
+#      - spring
+#    depends_on:
+#      - zipkin
+#      - eureka-server
+  customer:
+    image: customer:latest
+    container_name: customer
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - spring
+      - postgres
+#    depends_on:
+#      - zipkin
+#      - postgres
+#      - rabbitmq
+  fraud:
+    image: fraud:latest
+    container_name: fraud
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - spring
+      - postgres
+#    depends_on:
+#      - zipkin
+#      - postgres
+#      - rabbitmq
+  notification:
+    image: notification:latest
+    container_name: notification
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - spring
+      - postgres
+#    depends_on:
+#      - zipkin
+#      - postgres
+#      - rabbitmq
 
 networks:
   postgres:

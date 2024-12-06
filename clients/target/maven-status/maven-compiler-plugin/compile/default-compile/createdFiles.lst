@@ -1,0 +1,4 @@
+ru/als/app/notification/NotificationClient.class
+ru/als/app/notification/NotificationRequest.class
+ru/als/app/fraud/FraudCheckResponse.class
+ru/als/app/fraud/FraudClient.class
